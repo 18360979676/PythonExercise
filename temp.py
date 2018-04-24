@@ -86,18 +86,30 @@
 
 #定义函数
 #在命令行交互模式运行的方式 from 函数所在的文件名fileName import 函数名称funName
-def my_abs(x):
-    if not isinstance(x, (int, float)):
-        raise TypeError('bad operand type')
-    if x >= 0:
-        return x
-    else:
-        return -x
+# def my_abs(x):
+#     if not isinstance(x, (int, float)):
+#         raise TypeError('bad operand type')
+#     if x >= 0:
+#         return x
+#     else:
+#         return -x
 # print(my_abs(-9))
 
 #定义空函数,起到占位符的作用
-def nop():
-    pass
+# def nop():
+#     pass
+
+#计算某个数字的n次方
+def power(x, n = 2):
+    s = 1
+    while n > 0:
+        n = n -1
+        s = s * x
+    return s
+print('{0}的{1}次方等于'.format(5, 2), power(5, 2))
+
+
+
 
 
 
