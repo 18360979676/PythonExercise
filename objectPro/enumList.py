@@ -7,6 +7,7 @@ __author__ = 'lyl'
 from enum import Enum, unique
 Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 
+
 # 枚举类派生出自定义类
 @unique
 class Weekday(Enum):
