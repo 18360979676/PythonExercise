@@ -24,9 +24,7 @@ im2 = im.filter(ImageFilter.BLUR)
 im2.save('thumbnail.jpg', 'jpeg')
 
 
-
-
-# 随即字母
+# 随机字母
 def rndChar():
     return chr(random.randint(65, 90))
 
@@ -34,6 +32,7 @@ def rndChar():
 # 随机颜色
 def rndColor():
     return (random.randint(64,255), random.randint(64,255), random.randint(64,255))
+
 
 # 随即颜色2
 def rndColor2():
@@ -44,6 +43,7 @@ def rndColor2():
 width = 60 * 4
 height = 60
 image = Image.new('RGB', (width, height), (255, 255, 255))
+
 
 # 创建Font对象
 font = ImageFont.truetype('Arial.ttf', 36)
