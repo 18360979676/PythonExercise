@@ -18,4 +18,4 @@ message = client.messages.create(
                               to="+8618360979676"
                           )
 
-print(message.sid)
+print(message)
