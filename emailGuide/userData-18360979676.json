@@ -1,8 +1,8 @@
 {
     "from_adder": "18360979676@163.com",
-    "password": "qweasdzxc123",
-    "to_addr": ["396852019@qq.com", "18360979676@163.com"],
-    "server_addr": "smtp.163.com",
+    "password": "lyl12345678",
+    "to_adder": ["396852019@qq.com", "18360979676@163.com"],
+    "server_adder": "smtp.163.com",
     "port": 465,
     "content_body": "18360979676@163.com and 396852019@qq.com",
     "content_title": "support"
