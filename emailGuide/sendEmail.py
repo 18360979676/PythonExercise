@@ -25,7 +25,7 @@ with open('./userData-18360979676.json',  encoding='utf-8') as fr:
 # msg["to"] = email_data["from_adder"]
 
 
-def send_email(email_data):
+def send_email(email_data): 
 
     msg = MIMEText(email_data["content_body"], 'plain', 'utf-8')
     msg['Subject'] = Header(email_data["content_title"], 'utf-8')
