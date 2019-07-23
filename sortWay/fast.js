@@ -8,11 +8,11 @@ function guessSort(arr) {
     var mid = arr[arr.length / 2];
     arr.splice(arr.length / 2, 1);
     var left = [], right = [];
-    for(var i = 0; i < arr.length; item++){
-        if(arr[i] >= mid)
-            right.push(arr[i])
+    for(var item = 0; item < arr.length; item++){
+        if(arr[item] >= mid)
+            right.push(arr[item])
         else
-            left.push(arr[i])
+            left.push(arr[item])
     }
     return guessSort(left) + [mid] + guessSort(right)
 }

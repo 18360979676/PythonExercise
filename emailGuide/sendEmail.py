@@ -3,11 +3,7 @@
 
 __author__ = 'lyl'
 
-
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText  # 正文内容格式为文本模式
-from email.mime.base import MIMEBase
-from email import encoders
 from email.header import Header
 import smtplib  # 发送邮件
 import json  # 处理json数据
@@ -17,15 +13,7 @@ import json  # 处理json数据
 with open('./userData-18360979676.json',  encoding='utf-8') as fr:
     email_data = json.load(fr)
 
-
-# 邮件正文和标
-# msg = MIMEText(email_data["content_body"], 'plain', 'utf-8')
-# msg['Subject'] = Header(email_data["content_title"], 'utf-8')
-# msg["from"] = email_data["from_adder"]
-# msg["to"] = email_data["from_adder"]
-
-
-def send_email(email_data): 
+def send_email(email_data):
 
     msg = MIMEText(email_data["content_body"], 'plain', 'utf-8')
     msg['Subject'] = Header(email_data["content_title"], 'utf-8')
