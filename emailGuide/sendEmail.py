@@ -10,15 +10,15 @@ import json  # 处理json数据
 
 
 # 发送邮件
-with open('./userData-18360979676.json',  encoding='utf-8') as fr:
+with open('./userData-396852019.json',  encoding='utf-8') as fr:
     email_data = json.load(fr)
 
 def send_email(email_data):
 
     msg = MIMEText(email_data["content_body"], 'plain', 'utf-8')
     msg['Subject'] = Header(email_data["content_title"], 'utf-8')
-    msg["from"] = email_data["from_adder"]
-    msg["to"] = email_data["from_adder"]
+    msg["From"] = Header(email_data["from_adder"], 'utf-8')
+    msg["To"] = Header(','.join(email_data['to_adder']), 'utf-8')
 
     try:
         smtpobj = smtplib.SMTP_SSL(email_data["server_adder"], email_data["port"])

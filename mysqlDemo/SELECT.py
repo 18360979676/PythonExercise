@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-#@Time  : 2019/7/22 20:29
-#@Author: yezhu
-#@File  : connector.py
+__author__ = 'Administrator'
+# 'Administrator' 为预定义的变量，为你当前登录的计算机用户名
 
 from mysql.connector import Connect
 
@@ -12,7 +9,11 @@ mydb = Connect(
     passwd="123456",    # 数据库密码
     database="runnoob_db"
 )
-
 mycursor = mydb.cursor()
-mycursor.execute("ALTER TABLE sites ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
 
+mycursor.execute("select id, url from sites")
+
+myresult = mycursor.fetchall(3)
+
+for x in myresult:
+    print(x)

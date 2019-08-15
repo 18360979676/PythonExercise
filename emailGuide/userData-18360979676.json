@@ -1,9 +1,9 @@
 {
     "from_adder": "18360979676@163.com",
     "password": "lyl12345678",
-    "to_adder": ["396852019@qq.com"],
+    "to_adder": "396852019@qq.com",
     "server_adder": "smtp.163.com",
     "port": 465,
-    "content_body": "野猪账号发出的信息",
-    "content_title": "邮件正文"
+    "content_body": "有效数据",
+    "content_title": "商品销售一览表"
 }

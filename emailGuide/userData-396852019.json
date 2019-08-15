@@ -1,9 +1,9 @@
 {
     "from_adder": "396852019@qq.com",
     "password": "pfidxnzpvzvwbjfi",
-    "to_adder": ["18360979676@163.com", "396852019@qq.com"],
+    "to_adder": ["18360979676@163.com"],
     "server_adder": "smtp.qq.com",
     "port": 465,
-    "content_body": "hello, everbody.Next I'll ask some students to come to the blackboard",
-    "content_title": "对账数据"
+    "content_body": "卖猪肉",
+    "content_title": "野猪"
 }
