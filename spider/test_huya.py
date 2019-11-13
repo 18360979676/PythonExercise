@@ -43,7 +43,7 @@ class GetHuYa(object):
         try:
             driver.maximize_window()
         except WebDriverException as e:
-            pass
+            print(e)
         driver.get(self.server)
         time.sleep(2)
         driver.find_element_by_link_text('一起看').click()
@@ -57,6 +57,8 @@ class GetHuYa(object):
         driver.find_element_by_class_name('udb-input-pw').send_keys('lyl123456')
         driver.find_element_by_id('login-btn').click()
         wait.until(lambda x: x.find_element_by_xpath("//ul[@id=\"js-live-list\"]/li/a[contains(text(),\"山鸡哥\")]")).click()
+        # 截屏
+        driver.save_screenshot('../publicFile/img/test_huya/huya_detail.png')
         need_handle = driver.window_handles[len(driver.window_handles) - 1]
         for item_tab in driver.window_handles:
             if item_tab != need_handle:
@@ -66,9 +68,10 @@ class GetHuYa(object):
         time.sleep(2)
         driver.execute_script('$(arguments[0]).attr(\'value\',\'大爷的\');$(arguments[1]).addClass(\'enable\').click();', driver.find_element_by_id('pub_msg_input'), driver.find_element_by_id('msg_send_bt'))
         time.sleep(1000)
+        print(driver.get_cookies())
 
 
 if __name__ == "__main__":
     get_hu_ya = GetHuYa("https://www.huya.com/")
-    # get_hu_ya.debug_hu_ya_video()
-    get_hu_ya.get_content()
+    get_hu_ya.debug_hu_ya_video()
+    # get_hu_ya.get_content()
